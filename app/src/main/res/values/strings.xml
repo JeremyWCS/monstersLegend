@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">projetMonsterLegend</string>
-    <string name="button_main"> Extended page </string>
+    <string name="button_main"> Expanded page </string>
+    <string name="title_expanded"> Expanded Page Test </string>
+    <string name="stat"> Statistiques </string>
+    <string name="level">Level</string>
 </resources>
