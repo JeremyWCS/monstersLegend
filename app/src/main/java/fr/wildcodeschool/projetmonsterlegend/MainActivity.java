@@ -14,13 +14,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 ///////////////////////////////////////////////////////////////////////////////////////:
         Button buttonPage = findViewById(R.id.button_main);
+        Button buttonRomain = findViewById(R.id.Romain);
         final Intent expandedPage = new Intent(MainActivity.this, MonsterExpandedActivity.class);
+        final Intent RomainPage = new Intent(MainActivity.this, MonstersActivity.class);
 
         buttonPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(expandedPage);
             }
+
+        });
+
+        buttonRomain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(RomainPage);
+            }
+
         });
     }
 }
