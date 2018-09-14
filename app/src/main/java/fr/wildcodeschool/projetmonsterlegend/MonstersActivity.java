@@ -75,6 +75,7 @@ public class MonstersActivity extends AppCompatActivity {
                 String levelValue = editLevel.getText().toString();
                 int levelInt = Integer.valueOf(levelValue);
 
+
                 if (levelInt>70){
                     levelInt=70;
                     editLevel.setText("70");
