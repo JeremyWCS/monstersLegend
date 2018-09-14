@@ -22,6 +22,7 @@ public class MonstersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monsters);
 
+
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("");
         getSupportActionBar().setLogo(R.drawable.monsterlegends_logo);

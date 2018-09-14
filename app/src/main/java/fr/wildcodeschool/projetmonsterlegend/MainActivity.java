@@ -12,7 +12,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-///////////////////////////////////////////////////////////////////////////////////////:
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("");
+        getSupportActionBar().setLogo(R.drawable.monsterlegends_logo);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+
         Button buttonPage = findViewById(R.id.button_main);
         Button buttonRomain = findViewById(R.id.Romain);
         final Intent expandedPage = new Intent(MainActivity.this, MonsterExpandedActivity.class);
