@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,26 +22,31 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setLogo(R.drawable.monsterlegends_logo);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
+        ArrayList<RowItem>monsterList=
+                new ArrayList<>();
 
-        Button buttonPage = findViewById(R.id.button_main);
-        Button buttonRomain = findViewById(R.id.Romain);
-        final Intent expandedPage = new Intent(MainActivity.this, MonsterExpandedActivity.class);
-        final Intent RomainPage = new Intent(MainActivity.this, MonstersActivity.class);
+        monsterList.add(new RowItem("Fire Lion", R.drawable.fire_lion_0));
+        monsterList.add(new RowItem("Genie", R.drawable.genie_0));
+        monsterList.add(new RowItem("Light Spirit", R.drawable.light_spirit_0));
+        monsterList.add(new RowItem("Metalsaur", R.drawable.metalsaur_0));
+        monsterList.add(new RowItem("Panda", R.drawable.panda_0));
+        monsterList.add(new RowItem("Rockilla", R.drawable.rockilla_0a));
+        monsterList.add(new RowItem("Thunder Eagle", R.drawable.thunder_eagle_0));
+        monsterList.add(new RowItem("Turtle", R.drawable.turtle_0));
+        monsterList.add(new RowItem("Tyrannoking", R.drawable.tyrannoking_0));
 
-        buttonPage.setOnClickListener(new View.OnClickListener() {
+
+        CustomAdapter adapter =new CustomAdapter(this, monsterList);
+        ListView listmonster=findViewById(R.id.list);
+        listmonster.setAdapter(adapter);
+
+        listmonster.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(expandedPage);
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent goToMonsterActivity = new Intent(MainActivity.this,
+                        MonstersActivity.class);
+                MainActivity.this.startActivity(goToMonsterActivity);
             }
-
-        });
-
-        buttonRomain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(RomainPage);
-            }
-
         });
     }
 }

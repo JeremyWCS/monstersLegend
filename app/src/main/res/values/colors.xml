@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
+    <color name="background_welcome">#FF4F008C</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimaryFireLion">#ff6b15</color>
     <color name="colorSecondaryFireLion">#ffd799</color>
