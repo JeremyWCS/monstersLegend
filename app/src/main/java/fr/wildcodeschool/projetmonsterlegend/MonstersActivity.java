@@ -22,6 +22,12 @@ public class MonstersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monsters);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("");
+        getSupportActionBar().setLogo(R.drawable.monsterlegends_logo);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+
 
         final ImageView imageN0 = findViewById(R.id.image_n0);
         final ImageView imageN1 = findViewById(R.id.image_n1);
@@ -48,14 +54,14 @@ public class MonstersActivity extends AppCompatActivity {
         final android.support.constraint.Group groupSkills = findViewById(R.id.groupSkills);
         //les variables statistiques
         final int stamina=100;
-        final int[] force = {142};
-        final int[] speed = {24};
-        final int[] life = {3};
+        final int[] force = {220};
+        final int[] speed = {175};
+        final int[] life = {50};
 
         staminaBar.setMax(200);
-        forceBar.setMax(700+142);
-        speedBar.setMax(4*70+24);
-        lifeBar.setMax(6*70+3);
+        forceBar.setMax(2000);
+        speedBar.setMax(1700);
+        lifeBar.setMax(8000);
 
         //initialisation a la première execution (pour ne pas attendre une modification pour l'affichage de valeurs)
         lifeText.setText(Integer.toString(life[0]));
@@ -204,9 +210,9 @@ public class MonstersActivity extends AppCompatActivity {
                 }
 
                 //calcul des stats
-                force[0] = 10 * lvlInt + 142;
-                speed[0] = 4 * lvlInt + 24;
-                life[0] = 6 * lvlInt + 3;
+                force[0] = 22 * lvlInt + 220;
+                speed[0] = 17 * lvlInt + 50;
+                life[0] = 105 * lvlInt + 50;
                 lifeText.setText(Integer.toString(life[0]));
                 forceText.setText(Integer.toString(force[0]));
                 speedText.setText(Integer.toString(speed[0]));
