@@ -17,7 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("");
+        getSupportActionBar().setLogo(R.drawable.monsterlegends_logo);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         ArrayList<RowItem>monsterList=
                 new ArrayList<>();

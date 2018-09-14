@@ -2,10 +2,8 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
+    <color name="background_welcome">#FF4F008C</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="grey">#979797</color>
-    <color name="darkgrey">#666666</color>
-    <color name="black">#000</color>
-    <color name="violet">#9530ce</color>
-
+    <color name="colorPrimaryFireLion">#ff6b15</color>
+    <color name="colorSecondaryFireLion">#ffd799</color>
 </resources>
