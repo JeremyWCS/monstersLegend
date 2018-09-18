@@ -33,6 +33,11 @@ public class CustomAdapter extends ArrayAdapter<RowItem> {
         Drawable monsterImage = ContextCompat.getDrawable(getContext(), item.getMonster_pics_id());
         monsterPics.setImageDrawable(monsterImage);
 
+        ImageView monsterBte = convertView.findViewById(R.id.monsters_type_pic);
+        Drawable monsterType = ContextCompat.getDrawable(getContext(), item.getMonsters_type_pic_id());
+        monsterBte.setImageDrawable(monsterType);
+
+
         return convertView;
     }
 

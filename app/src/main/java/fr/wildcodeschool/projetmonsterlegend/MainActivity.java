@@ -35,15 +35,15 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<RowItem>monsterList=
                 new ArrayList<>();
 
-        monsterList.add(new RowItem("Fire Lion", R.drawable.fire_lion_0));
-        monsterList.add(new RowItem("Genie", R.drawable.genie_0));
-        monsterList.add(new RowItem("Light Spirit", R.drawable.light_spirit_0));
-        monsterList.add(new RowItem("Metalsaur", R.drawable.metalsaur_0));
-        monsterList.add(new RowItem("Panda", R.drawable.panda_0));
-        monsterList.add(new RowItem("Rockilla", R.drawable.rockilla_0a));
-        monsterList.add(new RowItem("Thunder Eagle", R.drawable.thunder_eagle_0));
-        monsterList.add(new RowItem("Turtle", R.drawable.turtle_0));
-        monsterList.add(new RowItem("Tyrannoking", R.drawable.tyrannoking_0));
+        monsterList.add(new RowItem("Fire Lion", R.drawable.fire_lion_0, R.drawable.bte_fire));
+        monsterList.add(new RowItem("Genie", R.drawable.genie_0, R.drawable.bte_magic));
+        monsterList.add(new RowItem("Light Spirit", R.drawable.light_spirit_0, R.drawable.bte_light));
+        monsterList.add(new RowItem("Metalsaur", R.drawable.metalsaur_0, R.drawable.bte_metal));
+        monsterList.add(new RowItem("Panda", R.drawable.panda_0, R.drawable.bte_nature));
+        monsterList.add(new RowItem("Rockilla", R.drawable.rockilla_0a, R.drawable.bte_earth));
+        monsterList.add(new RowItem("Thunder Eagle", R.drawable.thunder_eagle_0, R.drawable.bte_thunder));
+        monsterList.add(new RowItem("Turtle", R.drawable.turtle_0, R.drawable.bte_water));
+        monsterList.add(new RowItem("Tyrannoking", R.drawable.tyrannoking_0, R.drawable.bte_dark));
 
 
 
