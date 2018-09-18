@@ -29,9 +29,20 @@ public class CustomAdapter extends ArrayAdapter<RowItem> {
         }
         TextView monsterName = convertView.findViewById(R.id.monster_name);
         monsterName.setText(item.getMonster_name());
+
         ImageView monsterPics = convertView.findViewById(R.id.monster_pics);
         Drawable monsterImage = ContextCompat.getDrawable(getContext(), item.getMonster_pics_id());
         monsterPics.setImageDrawable(monsterImage);
+
+<<<<<<< Updated upstream
+        ImageView monsterBte = convertView.findViewById(R.id.monsters_type_pic);
+        Drawable monsterType = ContextCompat.getDrawable(getContext(), item.getMonsters_type_pic_id());
+        monsterBte.setImageDrawable(monsterType);
+=======
+        ImageView monsterType = convertView.findViewById(R.id.monsters_type_pic);
+        Drawable monsterTypes = ContextCompat.getDrawable(getContext(), item.getMonsters_type_pic_id());
+        monsterTypes.setImageDrawable(monsterType);
+>>>>>>> Stashed changes
 
         return convertView;
     }
