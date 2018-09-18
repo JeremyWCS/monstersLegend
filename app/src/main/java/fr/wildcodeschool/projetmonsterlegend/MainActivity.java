@@ -1,6 +1,9 @@
 package fr.wildcodeschool.projetmonsterlegend;
 
+import android.content.ClipData;
 import android.content.Intent;
+import android.inputmethodservice.Keyboard;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +19,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        ImageAdapter adapter = new ImageAdapter(this);
+        viewPager.setAdapter(adapter);
+    //Affiche le slide ecrit dans le ImageAdapter.java.
+
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("");
@@ -36,9 +46,10 @@ public class MainActivity extends AppCompatActivity {
         monsterList.add(new RowItem("Tyrannoking", R.drawable.tyrannoking_0));
 
 
-        CustomAdapter adapter =new CustomAdapter(this, monsterList);
+
+        CustomAdapter Adapter =new CustomAdapter(this, monsterList);
         ListView listmonster=findViewById(R.id.list);
-        listmonster.setAdapter(adapter);
+        listmonster.setAdapter(Adapter);
 
         listmonster.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -49,4 +60,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }
