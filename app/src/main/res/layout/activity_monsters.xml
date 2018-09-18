@@ -5,6 +5,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorSecondaryFireLion"
@@ -28,9 +29,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryFireLion"
-            android:text="Fire Lion"
             android:textAlignment="center"
-            android:textSize="35dp"
+            android:textSize="35sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +38,7 @@
 
         <ImageView
             android:id="@+id/image_type"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -51,6 +52,7 @@
 
         <ImageView
             android:id="@+id/image_arene"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="0dp"
             android:layout_height="308dp"
             android:alpha="0.5"
@@ -60,23 +62,8 @@
             app:srcCompat="@drawable/fire_habitat_8" />
 
         <ImageView
-            android:id="@+id/image_center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_arene"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/image_arene"
-            app:layout_constraintTop_toTopOf="@+id/image_arene"
-            app:srcCompat="@drawable/fire_lion_0" />
-
-        <ImageView
             android:id="@+id/image_n0"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="61dp"
             android:layout_height="63dp"
             android:layout_marginEnd="8dp"
@@ -91,6 +78,7 @@
 
         <ImageView
             android:id="@+id/image_n1"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="89dp"
             android:layout_height="82dp"
             android:layout_marginLeft="8dp"
@@ -103,6 +91,7 @@
 
         <ImageView
             android:id="@+id/image_n2"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="87dp"
             android:layout_height="82dp"
             android:layout_marginTop="240dp"
@@ -113,6 +102,7 @@
 
         <ImageView
             android:id="@+id/image_n3"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="124dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -296,6 +286,7 @@
 
         <ImageView
             android:id="@+id/imageView"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -307,6 +298,7 @@
 
         <ImageView
             android:id="@+id/imageView2"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -318,6 +310,7 @@
 
         <ImageView
             android:id="@+id/imageView3"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -329,6 +322,7 @@
 
         <ImageView
             android:id="@+id/imageView4"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -421,7 +415,6 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
-            android:text="@string/monsterInfo"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -601,6 +594,7 @@
 
         <ImageView
             android:id="@+id/imageView5"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -620,7 +614,6 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Surchauffe"
             app:layout_constraintBottom_toBottomOf="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="@+id/skillText1"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
@@ -628,6 +621,7 @@
 
         <ImageView
             android:id="@+id/imageView6"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
@@ -645,7 +639,6 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Feu Orange"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/textView9"
             app:layout_constraintStart_toEndOf="@+id/imageView6"
@@ -653,6 +646,7 @@
 
         <ImageView
             android:id="@+id/imageView7"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
@@ -670,7 +664,6 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Fourrure Fondante"
             app:layout_constraintBottom_toBottomOf="@+id/imageView7"
             app:layout_constraintEnd_toEndOf="@+id/textView10"
             app:layout_constraintStart_toEndOf="@+id/imageView7"
@@ -678,6 +671,7 @@
 
         <ImageView
             android:id="@+id/imageView8"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -697,7 +691,6 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Griffes incandescentes"
             app:layout_constraintBottom_toBottomOf="@+id/imageView8"
             app:layout_constraintEnd_toEndOf="@+id/skillText2"
             app:layout_constraintStart_toEndOf="@+id/imageView8"
@@ -705,6 +698,7 @@
 
         <ImageView
             android:id="@+id/imageView9"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
@@ -722,7 +716,6 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Gaz enflammé"
             app:layout_constraintBottom_toBottomOf="@+id/imageView9"
             app:layout_constraintEnd_toEndOf="@+id/textView12"
             app:layout_constraintStart_toEndOf="@+id/imageView9"
@@ -730,6 +723,7 @@
 
         <ImageView
             android:id="@+id/imageView10"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
@@ -747,7 +741,6 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Peau Eruptive"
             app:layout_constraintBottom_toBottomOf="@+id/imageView10"
             app:layout_constraintEnd_toEndOf="@+id/textView13"
             app:layout_constraintStart_toEndOf="@+id/imageView10"
@@ -757,7 +750,10 @@
             android:id="@+id/imageView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="20dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintStart_toStartOf="@+id/skillText3"
             app:layout_constraintTop_toBottomOf="@+id/skillText3"
             app:srcCompat="@drawable/bte_fire" />
@@ -772,7 +768,6 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Feu de forêt"
             app:layout_constraintBottom_toBottomOf="@+id/imageView11"
             app:layout_constraintEnd_toEndOf="@+id/skillText2"
             app:layout_constraintHorizontal_bias="0.0"
@@ -782,6 +777,7 @@
 
         <ImageView
             android:id="@+id/imageView12"
+            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/imageView11"
@@ -798,7 +794,6 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Lava Trempette"
             app:layout_constraintBottom_toBottomOf="@+id/imageView12"
             app:layout_constraintEnd_toEndOf="@+id/textView15"
             app:layout_constraintStart_toEndOf="@+id/imageView12"
@@ -823,7 +818,6 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Rayon Solaire hyper concentré de la mort"
             app:layout_constraintBottom_toBottomOf="@+id/imageView13"
             app:layout_constraintEnd_toEndOf="@+id/textView16"
             app:layout_constraintStart_toEndOf="@+id/imageView13"
@@ -835,6 +829,23 @@
             android:layout_height="wrap_content"
             android:visibility="visible"
             app:constraint_referenced_ids="skillText3,textView11,textView16,skill1,imageView10,textView17,textView15,imageView8,imageView7,textView9,skill3,imageView9,imageView11,skillText1,skill2,imageView12,imageView13,textView14,imageView5,textView10,imageView6,textView12,textView13,skillText2" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="64dp"
+            android:clipToPadding="false"
+            android:clipChildren="true"
+            android:foregroundGravity="center"
+            android:paddingLeft="160dp"
+            app:layout_constraintBottom_toTopOf="@+id/image_n2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/image_arene"
+            app:layout_constraintVertical_bias="0.777"
+            tools:verticalScrollbarPosition="defaultPosition" />
 
 
     </android.support.constraint.ConstraintLayout>
