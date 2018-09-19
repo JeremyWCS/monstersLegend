@@ -7,7 +7,6 @@
     <color name="colorPrimaryFireLion">#ff6b15</color>
     <color name="colorSecondaryFireLion">#ffd799</color>
 
-
     <!--Colors of the background in the monsterList-->
     <color name="fireLionList">#DBA901</color>
     <color name="genieList">#01A9DB</color>
@@ -18,4 +17,8 @@
     <color name="thunderEagleList">#318CE7</color>
     <color name="turtleList">#00CCCB</color>
     <color name="tyrannokingList">#FF4F008C</color>
+
+    <color name="background">#7fffffff</color>
+    <color name="border">#000000</color>
+
 </resources>
