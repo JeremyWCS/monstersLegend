@@ -41,21 +41,22 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<RowItem>monsterList=
                 new ArrayList<>();
 
-        monsterList.add(new RowItem("Fire Lion", R.drawable.fire_lion_0, R.drawable.bte_fire));
-        monsterList.add(new RowItem("Genie", R.drawable.genie_0, R.drawable.bte_magic));
-        monsterList.add(new RowItem("Light Spirit", R.drawable.light_spirit_0, R.drawable.bte_light));
-        monsterList.add(new RowItem("Metalsaur", R.drawable.metalsaur_0, R.drawable.bte_metal));
-        monsterList.add(new RowItem("Panda", R.drawable.panda_0, R.drawable.bte_nature));
-        monsterList.add(new RowItem("Rockilla", R.drawable.rockilla_0a, R.drawable.bte_earth));
-        monsterList.add(new RowItem("Thunder Eagle", R.drawable.thunder_eagle_0, R.drawable.bte_thunder));
-        monsterList.add(new RowItem("Turtle", R.drawable.turtle_0, R.drawable.bte_water));
-        monsterList.add(new RowItem("Tyrannoking", R.drawable.tyrannoking_0, R.drawable.bte_dark));
+        monsterList.add(new RowItem("Fire Lion", R.drawable.fire_lion_0, R.drawable.bte_fire, R.color.fireLionList));
+        monsterList.add(new RowItem("Genie", R.drawable.genie_0, R.drawable.bte_magic, R.color.genieList));
+        monsterList.add(new RowItem("Light Spirit", R.drawable.light_spirit_0, R.drawable.bte_light, R.color.lightSpiritList));
+        monsterList.add(new RowItem("Metalsaur", R.drawable.metalsaur_0, R.drawable.bte_metal, R.color.metalsaurList));
+        monsterList.add(new RowItem("Panda", R.drawable.panda_0, R.drawable.bte_nature, R.color.pandaList));
+        monsterList.add(new RowItem("Rockilla", R.drawable.rockilla_0a, R.drawable.bte_earth, R.color.rockillaList));
+        monsterList.add(new RowItem("Thunder Eagle", R.drawable.thunder_eagle_0, R.drawable.bte_thunder, R.color.thunderEagleList));
+        monsterList.add(new RowItem("Turtle", R.drawable.turtle_0, R.drawable.bte_water, R.color.turtleList));
+        monsterList.add(new RowItem("Tyrannoking", R.drawable.tyrannoking_0, R.drawable.bte_dark, R.color.tyrannokingList));
 
 
 
         CustomAdapter Adapter =new CustomAdapter(this, monsterList);
         ListView listmonster=findViewById(R.id.list);
         listmonster.setAdapter(Adapter);
+
 
         listmonster.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(goToMonsterActivity);
             }
         });
+
     }
 
 }

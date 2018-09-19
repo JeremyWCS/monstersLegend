@@ -34,7 +34,6 @@ public class WelcomActivity extends AppCompatActivity {
                         MainActivity.class);
                 WelcomActivity.this.startActivity(goToactivity_main);
 
-
             }
         });
     }

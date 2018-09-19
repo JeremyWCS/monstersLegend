@@ -4,12 +4,16 @@ public class RowItem {
     private String monster_name;
     private int monster_pics_id;
     private int monsters_type_pic_id;
+    private int color;
 
 
-    public RowItem(String monster_name, int monster_pics, int monsters_type_pic){
+    public RowItem(String monster_name, int monster_pics, int monsters_type_pic, int color){
         this.monster_name= monster_name;
         this.monster_pics_id = monster_pics;
         this.monsters_type_pic_id = monsters_type_pic;
+        this.color=color;
+
+
     }
 
     public String getMonster_name() {
@@ -34,5 +38,13 @@ public class RowItem {
 
     public void setMonsters_type_pic_id(int monsters_type_pic_id) {
         this.monsters_type_pic_id = monsters_type_pic_id;
+    }
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
     }
 }
