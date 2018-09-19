@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.inputmethodservice.Keyboard;
 import android.media.MediaPlayer;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
         getSupportActionBar().setLogo(R.drawable.monsterlegends_logo);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
+        
 
         ArrayList<RowItem>monsterList=
                 new ArrayList<>();
