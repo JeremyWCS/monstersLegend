@@ -15,7 +15,7 @@ public class WelcomActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcom);
 
 
-        final MediaPlayer bombom = MediaPlayer.create(this, R.raw.battement_coeur);
+
         final MediaPlayer soundMonster = MediaPlayer.create(this,R.raw.soundmonster);
         //variables des sons.
 
@@ -29,7 +29,6 @@ public class WelcomActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 soundMonster.stop();//fin du son intro quand bouton actionné
-                bombom.start();
 
                 Intent goToactivity_main = new Intent(WelcomActivity.this,
                         MainActivity.class);
