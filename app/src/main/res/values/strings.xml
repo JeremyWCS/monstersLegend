@@ -2,16 +2,23 @@
     <string name="app_name">projetMonsterLegend</string>
     <string name="button_main"> Expanded page </string>
     <string name="title_expanded"> Expanded Page Test </string>
+    <string name="skill1">Peuvent être apprises aléatoirement au niveau 7, 10 et 15</string>
+    <string name="skill2">Peuvent être apprises aléatoirement au niveau 20, 25, 30, 45, 55, 60, 75, 85, 90</string>
+    <string name="skill3">Peuvent être apprises aléatoirement au niveau 35, 40, 50, 65, 70, 80, 95, 100</string>
+    <string name="contentDescr">Content Description</string>
     <string name="stat"> Statistiques </string>
     <string name="level">Level</string>
     <string name="toast">Entre un niveau please.</string>
-    <string name="monsterInfo">Possessing a mane of white-hot hell fire and more than just a sting in his tail – the Fire Lion is a creature of mythic awesomeness! The Fire Lion will make fast work of anyone foolish enough to challenge him.</string>
     <string name="eggLevel">Lvl 0</string>
     <string name="FirstLevel">Lvl 1-9</string>
     <string name="ScdLevel">Lvl 10-20</string>
     <string name="ThdLevel">Lvl 20</string>
-    <string name="skill1">Peuvent être apprises aléatoirement au niveau 7, 10 et 15</string>
-    <string name="skill2">Peuvent être apprises aléatoirement au niveau 20, 25, 30, 45, 55, 60, 75, 85, 90</string>
-    <string name="skill3">Peuvent être apprises aléatoirement au niveau 35, 40, 50, 65, 70, 80, 95, 100</string>
+
+
+
+
+
 
 </resources>
+
+

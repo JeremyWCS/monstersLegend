@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent goToMonsterActivity = new Intent(MainActivity.this,
                         MonstersActivity.class);
+                goToMonsterActivity.putExtra("indexMonster",i);
                 MainActivity.this.startActivity(goToMonsterActivity);
             }
         });
