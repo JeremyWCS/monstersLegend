@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final MediaPlayer soundFond = MediaPlayer.create(this,R.raw.songfond);
+        soundFond.start();
+
 
         ViewPager viewPager = findViewById(R.id.viewPager);
         ImageAdapter adapter = new ImageAdapter(this);
@@ -55,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         listmonster.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                soundFond.stop();
 
                 Intent goToMonsterActivity = new Intent(MainActivity.this,
                         MonstersActivity.class);
