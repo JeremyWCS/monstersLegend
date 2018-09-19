@@ -1,10 +1,12 @@
 package fr.wildcodeschool.projetmonsterlegend;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.media.Image;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.ViewPager;
@@ -12,9 +14,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -184,8 +188,8 @@ public class MonstersActivity extends AppCompatActivity {
         ));
 
         monsters.add(new Monster(
-                Color.rgb(239, 242, 53),
-                Color.rgb(142, 255, 240),
+                Color.rgb(255, 210, 0),
+                Color.rgb(204, 255, 255),
                 "Thunder Eagle",
                 R.drawable.thunder_eagle_0,
                 R.drawable.thunder_eagle_1,
@@ -312,9 +316,9 @@ public class MonstersActivity extends AppCompatActivity {
         final ConstraintLayout corps = findViewById(R.id.constraintLayout);
         final ImageView habitat = findViewById(R.id.image_arene);
 
-
         monsterName.setText(monsters.get(iMon).getMonster_name());
-        monsterName.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
+
+        //monsterName.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
         infoText.setText(monsters.get(iMon).getMonster_info());
         imageN0.setImageResource(monsters.get(iMon).getMonster_pics_0());
         imageN1.setImageResource(monsters.get(iMon).getMonster_pics_1());
@@ -330,12 +334,21 @@ public class MonstersActivity extends AppCompatActivity {
         atq7.setImageResource(monsters.get(iMon).getAttakType()[6]);
         atq8.setImageResource(monsters.get(iMon).getAttakType()[7]);
         atq9.setImageResource(monsters.get(iMon).getAttakType()[8]);
-        infoMonster.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
-        skills.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
-        stat.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
-        skill1.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
-        skill2.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
-        skill3.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
+
+
+        GradientDrawable drawable = (GradientDrawable) infoMonster.getBackground();
+        drawable.setColor(monsters.get(iMon).getPrimaryColor());
+        monsterName.setBackgroundResource(R.drawable.background_title);
+        infoMonster.setBackgroundResource(R.drawable.shape);
+        skills.setBackgroundResource(R.drawable.shape);
+        stat.setBackgroundResource(R.drawable.shape);
+        skill1.setBackgroundResource(R.drawable.shape);
+        skill2.setBackgroundResource(R.drawable.shape);
+        skill3.setBackgroundResource(R.drawable.shape);
+
+
+
+
         scrollView.setBackgroundColor(monsters.get(iMon).getSecondaryColor());
         corps.setBackgroundColor(monsters.get(iMon).getSecondaryColor());
         btnLvl.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
@@ -387,6 +400,7 @@ public class MonstersActivity extends AppCompatActivity {
         imageN1.setColorFilter(filter);
         imageN2.setColorFilter(filter);
         imageN3.setColorFilter(filter);
+
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         //listener sur le changement de page
@@ -435,6 +449,7 @@ public class MonstersActivity extends AppCompatActivity {
                     imageN1.setColorFilter(filter);
                     imageN2.setColorFilter(filter);
                     imageN3.setColorFilter(0);
+
                 }
 
 
@@ -474,6 +489,7 @@ public class MonstersActivity extends AppCompatActivity {
         imageN3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 viewPager.setCurrentItem(3);
                 editLevel.setText("20");
                 btnLvl.performClick();
@@ -484,6 +500,11 @@ public class MonstersActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                InputMethodManager inputManager = (InputMethodManager)
+                        getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                        InputMethodManager.HIDE_NOT_ALWAYS);
 
                 String levelValue = editLevel.getText().toString();
 
@@ -554,6 +575,8 @@ public class MonstersActivity extends AppCompatActivity {
                 forceBar.setProgress(force[0]);
                 speedBar.setProgress(speed[0]);
                 lifeBar.setProgress(life[0]);
+
+
             }
             }
         });

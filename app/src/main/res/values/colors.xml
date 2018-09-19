@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="background_welcome">#FF4F008C</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorPrimaryFireLion">#ff6b15</color>
-    <color name="colorSecondaryFireLion">#ffd799</color>
+    <color name="background">#7fffffff</color>
+    <color name="border">#000000</color>
+
+
 </resources>

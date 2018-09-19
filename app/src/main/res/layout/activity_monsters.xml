@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorSecondaryFireLion"
+    android:background="@drawable/gradient"
     tools:context=".MonstersActivity"
     tools:layout_editor_absoluteX="76dp"
     tools:layout_editor_absoluteY="8dp">
@@ -20,7 +19,6 @@
         android:layout_height="wrap_content"
         android:minHeight="250dp"
         android:visibility="visible"
-        android:background="@color/colorSecondaryFireLion"
         tools:context=".MonstersActivity">
 
 
@@ -28,9 +26,9 @@
             android:id="@+id/text_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryFireLion"
             android:textAlignment="center"
             android:textColor="@android:color/black"
+
             android:textSize="45sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -39,13 +37,13 @@
 
         <ImageView
             android:id="@+id/image_type"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintBottom_toBottomOf="@+id/text_name"
             app:layout_constraintEnd_toEndOf="@+id/text_name"
             app:layout_constraintTop_toTopOf="@+id/text_name"
@@ -53,10 +51,10 @@
 
         <ImageView
             android:id="@+id/image_arene"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="0dp"
             android:layout_height="308dp"
             android:alpha="0.5"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_name"
@@ -64,7 +62,6 @@
 
         <ImageView
             android:id="@+id/image_n0"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="61dp"
             android:layout_height="63dp"
             android:layout_marginEnd="8dp"
@@ -72,6 +69,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="260dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintEnd_toStartOf="@+id/image_n1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/image_arene"
@@ -79,12 +77,12 @@
 
         <ImageView
             android:id="@+id/image_n1"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="89dp"
             android:layout_height="82dp"
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="240dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintEnd_toStartOf="@+id/image_n2"
             app:layout_constraintStart_toEndOf="@+id/image_n0"
             app:layout_constraintTop_toTopOf="@+id/image_arene"
@@ -92,10 +90,10 @@
 
         <ImageView
             android:id="@+id/image_n2"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="87dp"
             android:layout_height="82dp"
             android:layout_marginTop="240dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintEnd_toStartOf="@+id/image_n3"
             app:layout_constraintStart_toEndOf="@+id/image_n1"
             app:layout_constraintTop_toTopOf="@+id/image_arene"
@@ -103,7 +101,6 @@
 
         <ImageView
             android:id="@+id/image_n3"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="124dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -111,6 +108,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="200dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/image_n2"
             app:layout_constraintTop_toTopOf="@+id/image_arene"
@@ -132,8 +130,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:cursorVisible="false"
-            android:gravity="center"
             android:ems="10"
+            android:gravity="center"
             android:inputType="number"
             android:selectAllOnFocus="false"
             android:text="0"
@@ -165,12 +163,27 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:background="@color/colorPrimaryFireLion"
             android:text="Ok !"
             app:layout_constraintBottom_toBottomOf="@+id/level"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/level"
             app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/ShapeDrawableStat"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/stat"
+            app:srcCompat="@drawable/background_item" />
 
         <EditText
             android:id="@+id/life"
@@ -196,30 +209,39 @@
             android:id="@+id/Autre"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/colorPrimaryFireLion"
+            android:background="@drawable/shape"
             android:clickable="true"
             android:gravity="center"
             android:padding="10sp"
             android:text="Informations"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@android:color/black"
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/stamina" />
+            app:layout_constraintTop_toBottomOf="@+id/space" />
 
         <TextView
             android:id="@+id/stat"
             style="@style/Widget.AppCompat.AutoCompleteTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            android:background="@color/colorPrimaryFireLion"
+            android:background="@drawable/shape"
             android:clickable="true"
             android:gravity="center"
             android:padding="10sp"
             android:text="@string/stat"
+            android:textColor="@android:color/black"
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -228,7 +250,7 @@
 
         <EditText
             android:id="@+id/power"
-            android:layout_width="40dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
@@ -273,7 +295,6 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
-            android:editable="false"
             android:ems="10"
             android:enabled="false"
             android:gravity="center"
@@ -287,11 +308,11 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintBottom_toBottomOf="@+id/power"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/power"
@@ -299,11 +320,11 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintBottom_toBottomOf="@+id/life"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/life"
@@ -311,11 +332,11 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintBottom_toBottomOf="@+id/speed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/speed"
@@ -323,11 +344,11 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintBottom_toBottomOf="@+id/stamina"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/stamina"
@@ -341,18 +362,19 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
+            android:background="@drawable/shape"
+            android:padding="8sp"
             android:visibility="visible"
-            app:constraint_referenced_ids="power,speed,stamina,imageView4,imageView3,imageView,imageView2,life,speedBar,powerBar,lifeBar,staminaBar"
+            app:constraint_referenced_ids="power,speed,stamina,imageView4,imageView3,imageView,imageView2,life,speedBar,powerBar,lifeBar,staminaBar,ShapeDrawableStat"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:background="@android:color/darker_gray" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ProgressBar
             android:id="@+id/powerBar"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
@@ -412,10 +434,12 @@
             android:id="@+id/info"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/background_item"
+            android:padding="8sp"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -472,17 +496,36 @@
             app:layout_constraintStart_toStartOf="@+id/image_n3"
             app:layout_constraintTop_toTopOf="@+id/textView4" />
 
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/space2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/skills"
+            app:srcCompat="@drawable/background_item" />
+
         <TextView
             android:id="@+id/skills"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@color/colorPrimaryFireLion"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape"
             android:clickable="true"
             android:gravity="center"
             android:padding="10sp"
             android:text="Skills"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@android:color/black"
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -497,15 +540,15 @@
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:background="@color/colorPrimaryFireLion"
             android:clickable="true"
             android:gravity="center"
             android:text="Skills Group 1"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@android:color/black"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/skills"
+            tools:background="@drawable/shape"
             tools:padding="5dp" />
 
         <TextView
@@ -517,7 +560,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:background="@color/colorPrimaryFireLion"
+            android:background="@drawable/shape"
             android:clickable="true"
             android:gravity="center"
             android:text="Skills Group 2"
@@ -537,7 +580,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:background="@color/colorPrimaryFireLion"
+            android:background="@drawable/shape"
             android:clickable="true"
             android:gravity="center"
             android:text="Skills Group 3"
@@ -595,12 +638,12 @@
 
         <ImageView
             android:id="@+id/imageView5"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintStart_toStartOf="@+id/skillText1"
             app:layout_constraintTop_toBottomOf="@+id/skillText1"
             app:srcCompat="@drawable/bte_fire" />
@@ -622,10 +665,10 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintStart_toStartOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView5"
             app:srcCompat="@drawable/bte_fire" />
@@ -647,10 +690,10 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toBottomOf="@+id/imageView6"
             app:srcCompat="@drawable/bte_fire" />
@@ -672,12 +715,12 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintStart_toStartOf="@+id/skillText2"
             app:layout_constraintTop_toBottomOf="@+id/skillText2"
             app:srcCompat="@drawable/bte_fire" />
@@ -699,10 +742,10 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintStart_toStartOf="@+id/imageView8"
             app:layout_constraintTop_toBottomOf="@+id/imageView8"
             app:srcCompat="@drawable/bte_fire" />
@@ -724,10 +767,10 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintStart_toStartOf="@+id/imageView9"
             app:layout_constraintTop_toBottomOf="@+id/imageView9"
             app:srcCompat="@drawable/bte_fire" />
@@ -778,9 +821,9 @@
 
         <ImageView
             android:id="@+id/imageView12"
-            android:contentDescription="@string/contentDescr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/contentDescr"
             app:layout_constraintStart_toStartOf="@+id/imageView11"
             app:layout_constraintTop_toBottomOf="@+id/imageView11"
             app:srcCompat="@drawable/bte_fire" />
@@ -804,7 +847,9 @@
             android:id="@+id/imageView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
             android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageView12"
             app:layout_constraintTop_toBottomOf="@+id/imageView12"
             app:srcCompat="@drawable/bte_fire" />
@@ -828,16 +873,17 @@
             android:id="@+id/groupSkills"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/background_item"
             android:visibility="visible"
-            app:constraint_referenced_ids="skillText3,textView11,textView16,skill1,imageView10,textView17,textView15,imageView8,imageView7,textView9,skill3,imageView9,imageView11,skillText1,skill2,imageView12,imageView13,textView14,imageView5,textView10,imageView6,textView12,textView13,skillText2" />
+            app:constraint_referenced_ids="skillText3,textView11,textView16,skill1,imageView10,textView17,textView15,imageView8,imageView7,textView9,skill3,imageView9,imageView11,skillText1,skill2,imageView12,imageView13,textView14,imageView5,textView10,imageView6,textView12,textView13,skillText2,imageView16" />
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="64dp"
-            android:clipToPadding="false"
             android:clipChildren="true"
+            android:clipToPadding="false"
             android:foregroundGravity="center"
             android:paddingLeft="160dp"
             app:layout_constraintBottom_toTopOf="@+id/image_n2"
@@ -847,6 +893,28 @@
             app:layout_constraintTop_toTopOf="@+id/image_arene"
             app:layout_constraintVertical_bias="0.777"
             tools:verticalScrollbarPosition="defaultPosition" />
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            tools:layout_editor_absoluteX="173dp" />
+
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
 
     </android.support.constraint.ConstraintLayout>
