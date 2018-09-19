@@ -23,7 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="193dp"
         android:baselineAligned="false"
-        android:background="#955628"
+        android:background="@drawable/backgroundrn"
         android:paddingBottom="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
