@@ -3,6 +3,7 @@ package fr.wildcodeschool.projetmonsterlegend;
 import android.content.ClipData;
 import android.content.Intent;
 import android.inputmethodservice.Keyboard;
+import android.media.MediaPlayer;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final MediaPlayer soundFond = MediaPlayer.create(this,R.raw.songfond);
+        soundFond.start();
 
 
         ViewPager viewPager = findViewById(R.id.viewPager);
@@ -52,6 +56,17 @@ public class MainActivity extends AppCompatActivity {
         listmonster.setAdapter(Adapter);
 
 
+        listmonster.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                soundFond.stop();
+
+                Intent goToMonsterActivity = new Intent(MainActivity.this,
+                        MonstersActivity.class);
+                MainActivity.this.startActivity(goToMonsterActivity);
+            }
+        });
 
     }
 
