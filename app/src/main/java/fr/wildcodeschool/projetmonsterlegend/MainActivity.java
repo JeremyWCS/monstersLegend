@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
         getSupportActionBar().setLogo(R.drawable.monsterlegends_logo);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        
+
 
         ArrayList<RowItem>monsterList=
                 new ArrayList<>();
