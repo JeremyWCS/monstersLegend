@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#FF4F008C</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="background_welcome">#FF4F008C</color>
     <color name="colorAccent">#FF4081</color>
@@ -9,7 +9,7 @@
 
 
     <!--Colors of the background in the monsterList-->
-    <color name="fireLionList">#DBA901</color>
+    <color name="fireLionList">#ca0000</color>
     <color name="genieList">#01A9DB</color>
     <color name="lightSpiritList">#BCA9F5</color>
     <color name="metalsaurList">#D1B606</color>

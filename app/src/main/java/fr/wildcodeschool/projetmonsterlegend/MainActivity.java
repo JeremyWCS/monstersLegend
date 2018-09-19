@@ -52,10 +52,7 @@ public class MainActivity extends AppCompatActivity {
         ListView listmonster=findViewById(R.id.list);
         listmonster.setAdapter(Adapter);
 
-<<<<<<< HEAD
 
-
-=======
         listmonster.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -65,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(goToMonsterActivity);
             }
         });
->>>>>>> b224159601b489836937f4088d30c06a786c6f2f
+
     }
 
 }
