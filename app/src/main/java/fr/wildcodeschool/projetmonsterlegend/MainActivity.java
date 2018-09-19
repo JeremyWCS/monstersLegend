@@ -3,6 +3,7 @@ package fr.wildcodeschool.projetmonsterlegend;
 import android.content.ClipData;
 import android.content.Intent;
 import android.inputmethodservice.Keyboard;
+import android.media.MediaPlayer;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         listmonster.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
                 Intent goToMonsterActivity = new Intent(MainActivity.this,
                         MonstersActivity.class);
                 MainActivity.this.startActivity(goToMonsterActivity);
