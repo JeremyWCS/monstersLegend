@@ -7,7 +7,7 @@
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+
     tools:context=".MonstersActivity"
     tools:layout_editor_absoluteX="76dp"
     tools:layout_editor_absoluteY="8dp">
@@ -17,6 +17,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:minHeight="250dp"
         android:visibility="visible"
         tools:context=".MonstersActivity">

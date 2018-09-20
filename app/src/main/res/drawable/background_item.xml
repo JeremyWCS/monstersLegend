@@ -9,6 +9,7 @@
 
     <gradient android:startColor="@color/background"
         android:endColor="@color/background"/>
+
     <padding
         android:top="10dp"
         android:left="10dp"

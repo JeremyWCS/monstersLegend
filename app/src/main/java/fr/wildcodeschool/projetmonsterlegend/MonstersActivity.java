@@ -31,6 +31,9 @@ public class MonstersActivity extends AppCompatActivity {
 
     ViewPager viewPager;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -335,6 +338,13 @@ public class MonstersActivity extends AppCompatActivity {
         atq8.setImageResource(monsters.get(iMon).getAttakType()[7]);
         atq9.setImageResource(monsters.get(iMon).getAttakType()[8]);
 
+        int[] colors = new int[2];
+        colors[0] = R.color.colorPrimary;
+        colors[1] = R.color.colorPrimaryFireLion;
+
+        DrawableGradient backbround= new DrawableGradient(colors);
+
+        corps.setBackgroundDrawable(backbround);
 
         GradientDrawable drawable = (GradientDrawable) infoMonster.getBackground();
         drawable.setColor(monsters.get(iMon).getPrimaryColor());
@@ -345,13 +355,13 @@ public class MonstersActivity extends AppCompatActivity {
         skill1.setBackgroundResource(R.drawable.shape);
         skill2.setBackgroundResource(R.drawable.shape);
         skill3.setBackgroundResource(R.drawable.shape);
+        btnLvl.setBackgroundResource(R.drawable.shape);
 
 
 
 
-        scrollView.setBackgroundColor(monsters.get(iMon).getSecondaryColor());
-        corps.setBackgroundColor(monsters.get(iMon).getSecondaryColor());
-        btnLvl.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
+
+
         textAtq1.setText(monsters.get(iMon).getAttaques()[0]);
         textAtq2.setText(monsters.get(iMon).getAttaques()[1]);
         textAtq3.setText(monsters.get(iMon).getAttaques()[2]);
@@ -620,4 +630,16 @@ public class MonstersActivity extends AppCompatActivity {
         });
 
     }
-}
+
+    public class DrawableGradient extends GradientDrawable {
+        DrawableGradient(int[] colors) {
+            super(GradientDrawable.Orientation.TOP_BOTTOM, colors);
+
+            try {
+                this.setShape(GradientDrawable.RECTANGLE);
+                this.setGradientType(GradientDrawable.LINEAR_GRADIENT);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+}}
