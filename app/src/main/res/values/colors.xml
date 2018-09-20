@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#f7b7ff</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="background_welcome">#FF4F008C</color>
     <color name="colorAccent">#FF4081</color>
@@ -8,15 +8,15 @@
     <color name="colorSecondaryFireLion">#ffd799</color>
 
     <!--Colors of the background in the monsterList-->
-    <color name="fireLionList">#DBA901</color>
-    <color name="genieList">#01A9DB</color>
-    <color name="lightSpiritList">#BCA9F5</color>
-    <color name="metalsaurList">#D1B606</color>
-    <color name="pandaList">#16B84E</color>
-    <color name="rockillaList">#582900</color>
-    <color name="thunderEagleList">#318CE7</color>
-    <color name="turtleList">#00CCCB</color>
-    <color name="tyrannokingList">#FF4F008C</color>
+    <color name="fireLionList">#ff9900</color>
+    <color name="genieList">#8c1aff</color>
+    <color name="lightSpiritList">#ffb3ff</color>
+    <color name="metalsaurList">#878787</color>
+    <color name="pandaList">#9b5800</color>
+    <color name="rockillaList">#9b7200</color>
+    <color name="thunderEagleList">#ffd200</color>
+    <color name="turtleList">#0071cb</color>
+    <color name="tyrannokingList">#7d00de</color>
 
     <color name="background">#7fffffff</color>
     <color name="border">#000000</color>

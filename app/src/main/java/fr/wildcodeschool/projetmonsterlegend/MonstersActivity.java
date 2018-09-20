@@ -1,10 +1,12 @@
 package fr.wildcodeschool.projetmonsterlegend;
 
+import android.animation.TimeAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.media.Image;
@@ -30,6 +32,9 @@ public class MonstersActivity extends AppCompatActivity {
 
 
     ViewPager viewPager;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -236,8 +241,8 @@ public class MonstersActivity extends AppCompatActivity {
         ));
 
         monsters.add(new Monster(
-                Color.rgb(135, 135, 135),
-                Color.rgb(226, 228, 255),
+                Color.rgb(125, 0, 222),
+                Color.rgb(247, 183, 255),
                 "Tyrannoking",
                 R.drawable.tyrannoking_0,
                 R.drawable.tyrannoking_1,
@@ -264,6 +269,7 @@ public class MonstersActivity extends AppCompatActivity {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this, monsters.get(iMon));
 
         viewPager.setAdapter(viewPagerAdapter);
+
 
 
         final ImageView imageN0 = findViewById(R.id.image_n0);
@@ -318,7 +324,6 @@ public class MonstersActivity extends AppCompatActivity {
 
         monsterName.setText(monsters.get(iMon).getMonster_name());
 
-        //monsterName.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
         infoText.setText(monsters.get(iMon).getMonster_info());
         imageN0.setImageResource(monsters.get(iMon).getMonster_pics_0());
         imageN1.setImageResource(monsters.get(iMon).getMonster_pics_1());
@@ -336,22 +341,32 @@ public class MonstersActivity extends AppCompatActivity {
         atq9.setImageResource(monsters.get(iMon).getAttakType()[8]);
 
 
+        //définition des couleurs du background, et du background
+        int[] colors = new int[2];
+        colors[0] = monsters.get(iMon).getSecondaryColor();
+        colors[1] = monsters.get(iMon).getPrimaryColor();
+
+        GradientDrawable gd = new GradientDrawable(
+                GradientDrawable.Orientation.TOP_BOTTOM, colors);
+        gd.setCornerRadius(0f);
+        scrollView.setBackground(gd);
+
+
         GradientDrawable drawable = (GradientDrawable) infoMonster.getBackground();
         drawable.setColor(monsters.get(iMon).getPrimaryColor());
-        monsterName.setBackgroundResource(R.drawable.background_title);
+
+
         infoMonster.setBackgroundResource(R.drawable.shape);
         skills.setBackgroundResource(R.drawable.shape);
         stat.setBackgroundResource(R.drawable.shape);
         skill1.setBackgroundResource(R.drawable.shape);
         skill2.setBackgroundResource(R.drawable.shape);
         skill3.setBackgroundResource(R.drawable.shape);
+        btnLvl.setBackgroundResource(R.drawable.shape);
 
+        GradientDrawable drawable2 = (GradientDrawable) monsterName.getBackground();
+        drawable2.setColor(monsters.get(iMon).getPrimaryColor());
 
-
-
-        scrollView.setBackgroundColor(monsters.get(iMon).getSecondaryColor());
-        corps.setBackgroundColor(monsters.get(iMon).getSecondaryColor());
-        btnLvl.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
         textAtq1.setText(monsters.get(iMon).getAttaques()[0]);
         textAtq2.setText(monsters.get(iMon).getAttaques()[1]);
         textAtq3.setText(monsters.get(iMon).getAttaques()[2]);
@@ -613,6 +628,8 @@ public class MonstersActivity extends AppCompatActivity {
                 if(groupSkills.getVisibility()==View.GONE){
                     groupSkills.setVisibility(View.VISIBLE);
 
+
+
                 }
                 else groupSkills.setVisibility(View.GONE);
 
@@ -620,4 +637,17 @@ public class MonstersActivity extends AppCompatActivity {
         });
 
     }
-}
+
+    public class DrawableGradient extends GradientDrawable {
+        DrawableGradient(int[] colors) {
+            super(GradientDrawable.Orientation.TOP_BOTTOM, colors);
+
+            try {
+                this.setShape(GradientDrawable.RECTANGLE);
+                this.setGradientType(GradientDrawable.LINEAR_GRADIENT);
+            } catch (Exception e) {
+
+                //e.printStackTrace();
+            }
+        }
+}}
