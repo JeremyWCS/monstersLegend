@@ -1,6 +1,7 @@
 package fr.wildcodeschool.projetmonsterlegend;
 
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 
 public class Monster {
     int primaryColor;
@@ -23,10 +24,11 @@ public class Monster {
     private int bSpeed;
     private int bLife;
     private int[] attakType;
+    private int sound;
 
 
     public Monster(int primaryColor, int secondaryColor, String monster_name, int monster_pics_0, int monster_pics_1, int monster_pics_2, int monster_pics_3,int habitat, String monsterInfo, int type, String[] attaques, int aStamina, int aForce, int aSpeed, int aLife
-    ,int bStamina, int bForce, int bSpeed, int bLife, int[] attakType){
+    ,int bStamina, int bForce, int bSpeed, int bLife, int[] attakType, int sound){
         this.primaryColor=primaryColor;
         this.secondaryColor=secondaryColor;
         this.monster_name= monster_name;
@@ -47,6 +49,15 @@ public class Monster {
         this.bSpeed=bSpeed;
         this.bLife=bLife;
         this.attakType=attakType;
+        this.sound=sound;
+    }
+
+    public int getSound() {
+        return sound;
+    }
+
+    public void setSound(int sound) {
+        this.sound = sound;
     }
 
     public String getMonster_name() {

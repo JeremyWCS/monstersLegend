@@ -10,6 +10,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -69,7 +70,8 @@ public class MonstersActivity extends AppCompatActivity {
                 220,
                 170,
                 50,
-                new int[]{R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire}
+                new int[]{R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire,R.drawable.bte_fire},
+                R.raw.fire_lion
                 ));
 
         monsters.add(new Monster(
@@ -92,7 +94,8 @@ public class MonstersActivity extends AppCompatActivity {
                 190,
                 250,
                 50,
-        new int[]{R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_magic,R.drawable.bte_magic,R.drawable.bte_magic,R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_nature,R.drawable.bte_magic}
+        new int[]{R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_magic,R.drawable.bte_magic,R.drawable.bte_magic,R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_nature,R.drawable.bte_magic},
+                R.raw.genie
 
         ));
 
@@ -116,7 +119,8 @@ public class MonstersActivity extends AppCompatActivity {
                 175,
                 175,
                 71,
-                new int[]{R.drawable.bte_light,R.drawable.bte_nature,R.drawable.bte_light,R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_light,R.drawable.bte_any,R.drawable.bte_light,R.drawable.bte_any}
+                new int[]{R.drawable.bte_light,R.drawable.bte_nature,R.drawable.bte_light,R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_light,R.drawable.bte_any,R.drawable.bte_light,R.drawable.bte_any},
+                R.raw.light_spirit
 
         ));
 
@@ -140,7 +144,8 @@ public class MonstersActivity extends AppCompatActivity {
                 224,
                 200,
                 60,
-                new int[]{R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal}
+                new int[]{R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal,R.drawable.bte_metal},
+                R.raw.metalsaur
 
         ));
 
@@ -164,7 +169,8 @@ public class MonstersActivity extends AppCompatActivity {
                 190,
                 200,
                 56,
-                new int[]{R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature}
+                new int[]{R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature,R.drawable.bte_nature},
+                R.raw.panda
 
         ));
 
@@ -188,7 +194,8 @@ public class MonstersActivity extends AppCompatActivity {
                 175,
                 175,
                 71,
-                new int[]{R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth}
+                new int[]{R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth,R.drawable.bte_earth},
+                R.raw.rockilla
 
         ));
 
@@ -212,7 +219,8 @@ public class MonstersActivity extends AppCompatActivity {
                 175,
                 250,
                 50,
-                new int[]{R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_thunder,R.drawable.bte_any,R.drawable.bte_thunder,R.drawable.bte_thunder,R.drawable.bte_thunder,R.drawable.bte_any,R.drawable.bte_thunder}
+                new int[]{R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_thunder,R.drawable.bte_any,R.drawable.bte_thunder,R.drawable.bte_thunder,R.drawable.bte_thunder,R.drawable.bte_any,R.drawable.bte_thunder},
+                R.raw.bird_electric
 
         ));
 
@@ -236,7 +244,8 @@ public class MonstersActivity extends AppCompatActivity {
                 200,
                 200,
                 56,
-                new int[]{R.drawable.bte_any,R.drawable.bte_water,R.drawable.bte_water,R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_water,R.drawable.bte_any,R.drawable.bte_water,R.drawable.bte_water}
+                new int[]{R.drawable.bte_any,R.drawable.bte_water,R.drawable.bte_water,R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_water,R.drawable.bte_any,R.drawable.bte_water,R.drawable.bte_water},
+                R.raw.tortur
 
         ));
 
@@ -260,7 +269,8 @@ public class MonstersActivity extends AppCompatActivity {
                 230,
                 175,
                 50,
-                new int[]{R.drawable.bte_dark,R.drawable.bte_dark,R.drawable.bte_dark,R.drawable.bte_dark,R.drawable.bte_dark,R.drawable.bte_dark,R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_dark}
+                new int[]{R.drawable.bte_dark,R.drawable.bte_dark,R.drawable.bte_dark,R.drawable.bte_dark,R.drawable.bte_dark,R.drawable.bte_dark,R.drawable.bte_any,R.drawable.bte_any,R.drawable.bte_dark},
+                R.raw.turanoking
 
         ));
 
@@ -269,6 +279,8 @@ public class MonstersActivity extends AppCompatActivity {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this, monsters.get(iMon));
 
         viewPager.setAdapter(viewPagerAdapter);
+
+
 
 
 
@@ -352,6 +364,7 @@ public class MonstersActivity extends AppCompatActivity {
         scrollView.setBackground(gd);
 
 
+
         GradientDrawable drawable = (GradientDrawable) infoMonster.getBackground();
         drawable.setColor(monsters.get(iMon).getPrimaryColor());
 
@@ -416,7 +429,14 @@ public class MonstersActivity extends AppCompatActivity {
         imageN2.setColorFilter(filter);
         imageN3.setColorFilter(filter);
 
+        final MediaPlayer soundFond = MediaPlayer.create(this,monsters.get(iMon).getSound());
+        soundFond.start();
+
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+
+
+
 
         //listener sur le changement de page
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -636,6 +656,8 @@ public class MonstersActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
 
     public class DrawableGradient extends GradientDrawable {
@@ -650,4 +672,9 @@ public class MonstersActivity extends AppCompatActivity {
                 //e.printStackTrace();
             }
         }
-}}
+}
+    public void onBackPressed (MediaPlayer son){
+        son.stop();
+    }
+
+}
