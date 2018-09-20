@@ -32,11 +32,9 @@ public class MainActivity extends AppCompatActivity {
     //Affiche le slide ecrit dans le ImageAdapter.java.
 
 
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("");
-        getSupportActionBar().setLogo(R.drawable.monsterlegends_logo);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-        
+        getSupportActionBar().hide();
+
+
 
         ArrayList<RowItem>monsterList=
                 new ArrayList<>();
