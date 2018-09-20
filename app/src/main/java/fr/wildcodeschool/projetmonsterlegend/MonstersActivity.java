@@ -241,8 +241,8 @@ public class MonstersActivity extends AppCompatActivity {
         ));
 
         monsters.add(new Monster(
-                Color.rgb(135, 135, 135),
-                Color.rgb(226, 228, 255),
+                Color.rgb(125, 0, 222),
+                Color.rgb(247, 183, 255),
                 "Tyrannoking",
                 R.drawable.tyrannoking_0,
                 R.drawable.tyrannoking_1,
@@ -324,7 +324,6 @@ public class MonstersActivity extends AppCompatActivity {
 
         monsterName.setText(monsters.get(iMon).getMonster_name());
 
-        //monsterName.setBackgroundColor(monsters.get(iMon).getPrimaryColor());
         infoText.setText(monsters.get(iMon).getMonster_info());
         imageN0.setImageResource(monsters.get(iMon).getMonster_pics_0());
         imageN1.setImageResource(monsters.get(iMon).getMonster_pics_1());
@@ -353,13 +352,10 @@ public class MonstersActivity extends AppCompatActivity {
         scrollView.setBackground(gd);
 
 
-
-
         GradientDrawable drawable = (GradientDrawable) infoMonster.getBackground();
         drawable.setColor(monsters.get(iMon).getPrimaryColor());
 
 
-        monsterName.setBackgroundResource(R.drawable.background_title);
         infoMonster.setBackgroundResource(R.drawable.shape);
         skills.setBackgroundResource(R.drawable.shape);
         stat.setBackgroundResource(R.drawable.shape);
@@ -368,10 +364,8 @@ public class MonstersActivity extends AppCompatActivity {
         skill3.setBackgroundResource(R.drawable.shape);
         btnLvl.setBackgroundResource(R.drawable.shape);
 
-
-
-
-
+        GradientDrawable drawable2 = (GradientDrawable) monsterName.getBackground();
+        drawable2.setColor(monsters.get(iMon).getPrimaryColor());
 
         textAtq1.setText(monsters.get(iMon).getAttaques()[0]);
         textAtq2.setText(monsters.get(iMon).getAttaques()[1]);
@@ -633,7 +627,7 @@ public class MonstersActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(groupSkills.getVisibility()==View.GONE){
                     groupSkills.setVisibility(View.VISIBLE);
-                    scrollView.fullScroll(View.FOCUS_DOWN);
+
 
 
                 }
