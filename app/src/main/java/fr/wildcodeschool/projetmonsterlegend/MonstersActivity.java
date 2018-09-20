@@ -1,10 +1,12 @@
 package fr.wildcodeschool.projetmonsterlegend;
 
+import android.animation.TimeAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.media.Image;
@@ -269,6 +271,7 @@ public class MonstersActivity extends AppCompatActivity {
         viewPager.setAdapter(viewPagerAdapter);
 
 
+
         final ImageView imageN0 = findViewById(R.id.image_n0);
         final ImageView imageN1 = findViewById(R.id.image_n1);
         final ImageView imageN2 = findViewById(R.id.image_n2);
@@ -338,16 +341,24 @@ public class MonstersActivity extends AppCompatActivity {
         atq8.setImageResource(monsters.get(iMon).getAttakType()[7]);
         atq9.setImageResource(monsters.get(iMon).getAttakType()[8]);
 
+
+        //définition des couleurs du background, et du background
         int[] colors = new int[2];
-        colors[0] = R.color.colorPrimary;
-        colors[1] = R.color.colorPrimaryFireLion;
+        colors[0] = monsters.get(iMon).getSecondaryColor();
+        colors[1] = monsters.get(iMon).getPrimaryColor();
 
-        DrawableGradient backbround= new DrawableGradient(colors);
+        GradientDrawable gd = new GradientDrawable(
+                GradientDrawable.Orientation.TOP_BOTTOM, colors);
+        gd.setCornerRadius(0f);
+        scrollView.setBackground(gd);
 
-        corps.setBackgroundDrawable(backbround);
+
+
 
         GradientDrawable drawable = (GradientDrawable) infoMonster.getBackground();
         drawable.setColor(monsters.get(iMon).getPrimaryColor());
+
+
         monsterName.setBackgroundResource(R.drawable.background_title);
         infoMonster.setBackgroundResource(R.drawable.shape);
         skills.setBackgroundResource(R.drawable.shape);
@@ -622,6 +633,8 @@ public class MonstersActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(groupSkills.getVisibility()==View.GONE){
                     groupSkills.setVisibility(View.VISIBLE);
+                    scrollView.fullScroll(View.FOCUS_DOWN);
+
 
                 }
                 else groupSkills.setVisibility(View.GONE);
@@ -639,7 +652,8 @@ public class MonstersActivity extends AppCompatActivity {
                 this.setShape(GradientDrawable.RECTANGLE);
                 this.setGradientType(GradientDrawable.LINEAR_GRADIENT);
             } catch (Exception e) {
-                e.printStackTrace();
+
+                //e.printStackTrace();
             }
         }
 }}
