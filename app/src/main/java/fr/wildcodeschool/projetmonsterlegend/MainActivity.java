@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
                 soundFond.stop();
 
+
                 Intent goToMonsterActivity = new Intent(MainActivity.this,
                         MonstersActivity.class);
                 goToMonsterActivity.putExtra("indexMonster",i);
