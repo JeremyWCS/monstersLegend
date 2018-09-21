@@ -25,4 +25,6 @@
         android:cropToPadding="false"
         android:foregroundGravity="center"
         android:scrollbarAlwaysDrawHorizontalTrack="true" />
+
+
 </LinearLayout>
