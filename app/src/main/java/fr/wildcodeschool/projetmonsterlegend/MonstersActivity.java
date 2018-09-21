@@ -497,6 +497,7 @@ public class MonstersActivity extends AppCompatActivity {
                     imageN2.setColorFilter(filter);
                     imageN3.setColorFilter(0);
 
+
                 }
 
 
