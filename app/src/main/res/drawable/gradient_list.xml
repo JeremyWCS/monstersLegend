@@ -1,0 +1,14 @@
+
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/gradientmenu"
+        android:duration="2000" />
+
+    <item
+        android:drawable="@drawable/gradientmenu2"
+        android:duration="2000" />
+
+    <item
+        android:drawable="@drawable/gradientmenu3"
+        android:duration="2000" />
+</animation-list>
