@@ -2,8 +2,10 @@ package fr.wildcodeschool.projetmonsterlegend;
 
 import android.content.ClipData;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.inputmethodservice.Keyboard;
 import android.media.MediaPlayer;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -25,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
         final MediaPlayer soundFond = MediaPlayer.create(this,R.raw.songfond);
         soundFond.start();
 
+
+        //gradient animé
+        ViewPager viewPager3 = (ViewPager) findViewById(R.id.viewPager);
+        AnimationDrawable animationDrawable = (AnimationDrawable) viewPager3.getBackground();
+        animationDrawable.setEnterFadeDuration(1000);
+        animationDrawable.setExitFadeDuration(2000);
+        animationDrawable.start();
 
         ViewPager viewPager = findViewById(R.id.viewPager);
         ImageAdapter adapter = new ImageAdapter(this);

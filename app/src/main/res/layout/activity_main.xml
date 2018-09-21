@@ -19,14 +19,16 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="0dp"
-        android:layout_height="215dp"
-        android:background="@drawable/gradientmenu"
+        android:layout_height="324dp"
+        android:background="@drawable/gradient_list"
         android:baselineAligned="false"
         android:paddingBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context="com.viralandroid.animatedgradientandroid.MainActivity" />
 
 
 </android.support.constraint.ConstraintLayout>
