@@ -6,10 +6,10 @@
     <stroke android:width="2dp" android:color="@color/border"/>
 
 
-    <gradient android:angle="45"
-        android:startColor="@color/fireLionList"
-        android:centerColor="@color/lightSpiritList"
-        android:endColor="@color/genieList"
+    <gradient android:angle="75"
+        android:startColor="@color/colorPrimaryDark"
+        android:centerColor="@color/colorSecondaryFireLion"
+        android:endColor="@color/pandaList"
         android:gradientRadius="90"/>
 
 
